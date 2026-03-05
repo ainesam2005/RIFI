@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ECCE Module</title>
+
+<style>
+
+body{
+font-family:Segoe UI;
+background:#f3f3f3;
+text-align:center;
+padding:40px;
+}
+
+h1{
+color:#2bb673;
+margin-bottom:40px;
+}
+
+.container{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+}
+
+.card{
+width:220px;
+height:180px;
+background:#343a8f;
+color:white;
+display:flex;
+align-items:flex-end;
+justify-content:center;
+border-radius:15px;
+font-size:18px;
+padding-bottom:15px;
+text-decoration:none;
+transition:0.3s;
+}
+
+.card:hover{
+transform:scale(1.05);
+background:#2b2f75;
+}
+
+/* Back button */
+
+.back-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+width:50px;
+height:50px;
+background:#2bb673;
+color:white;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+text-decoration:none;
+box-shadow:0 4px 8px rgba(0,0,0,0.2);
+}
+
+.back-btn:hover{
+background:#249a5e;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Welcome to our ECCE Module</h1>
+
+<div class="container">
+
+<a href="numeracy.html" class="card">
+Numeracy
+</a>
+
+<a href="literacy.html" class="card">
+Literacy
+</a>
+
+</div>
+
+<!-- Back Icon -->
+<a href="dashboard.html" class="back-btn">←</a>
+
+</body>
+</html>

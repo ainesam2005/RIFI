@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Literacy Modules</title>
+
+<style>
+
+body{
+font-family: "Segoe UI", sans-serif;
+background:#f4f4f4;
+margin:0;
+padding:20px;
+text-align:center;
+}
+
+/* header */
+.header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:10px;
+}
+
+.header h1{
+color:#2bb673;
+letter-spacing:2px;
+}
+
+.back{
+background:#2bb673;
+color:white;
+border-radius:50%;
+width:35px;
+height:35px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:18px;
+text-decoration:none;
+}
+
+/* line */
+.line{
+height:3px;
+background:#2b2e83;
+margin:10px 0 20px 0;
+}
+
+/* text */
+.desc{
+color:#444;
+font-size:14px;
+margin-bottom:25px;
+}
+
+/* module grid */
+.modules{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+max-width:700px;
+margin:auto;
+}
+
+/* module card */
+.card{
+background:#2b2e83;
+color:white;
+padding:50px 0;
+border-radius:12px;
+font-size:18px;
+transition:0.3s;
+cursor:pointer;
+}
+
+.card:hover{
+background:#3f43b3;
+transform:scale(1.05);
+}
+
+@media(max-width:600px){
+
+.modules{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="header">
+<h1>LITERACY</h1>
+<a href="ecce.html" class="back">&#8592;</a>
+</div>
+
+<div class="line"></div>
+
+<p class="desc">
+Welcome to our Literacy module. To start learning, select the module you would like to start learning from and excel in your academics today
+</p>
+
+<div class="modules">
+
+<div class="card">Module 1</div>
+<div class="card">Module 2</div>
+<div class="card">Module 3</div>
+<div class="card">Module 4</div>
+<div class="card">Module 5</div>
+<div class="card">Module 6</div>
+
+</div>
+
+</body>
+</html>
