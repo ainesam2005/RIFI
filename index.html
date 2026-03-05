@@ -6,205 +6,183 @@
 <title>River Flow International</title>
 
 <style>
-
 *{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:Segoe UI, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Segoe UI, sans-serif;
 }
 
 /* INTRO SCREEN */
-
 #intro{
-position:fixed;
-width:100%;
-height:100vh;
-background:white;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
-z-index:1000;
-transition:1s;
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  z-index:1000;
+  transition:1s;
 }
 
 .logo{
-width:180px;
-animation:zoom 2s ease;
+  width:180px;
+  animation:zoom 2s ease;
 }
 
 .title{
-color:#24308b;
-font-weight:bold;
-font-size:26px;
-margin-top:10px;
-letter-spacing:1px;
+  color:#24308b;
+  font-weight:bold;
+  font-size:26px;
+  margin-top:10px;
+  letter-spacing:1px;
 }
 
 .line{
-height:3px;
-width:220px;
-background:#24308b;
-margin:10px auto;
+  height:3px;
+  width:220px;
+  background:#24308b;
+  margin:10px auto;
 }
 
 .subtitle{
-color:#2bb673;
-font-size:32px;
-font-weight:500;
+  color:#2bb673;
+  font-size:32px;
+  font-weight:500;
 }
 
 /* LOGIN SCREEN */
-
 #login{
-height:100vh;
-background:#3a3f96;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-position:relative;
-overflow:hidden;
+  height:100vh;
+  background:#3a3f96;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
 }
 
 /* Waves */
-
 .wave{
-position:absolute;
-bottom:0;
-width:200%;
-height:200px;
-background:rgba(255,255,255,0.08);
-border-radius:40%;
-animation:wave 8s infinite linear;
+  position:absolute;
+  bottom:0;
+  width:200%;
+  height:200px;
+  background:rgba(255,255,255,0.08);
+  border-radius:40%;
+  animation:wave 8s infinite linear;
 }
 
 .wave:nth-child(2){
-bottom:30px;
-animation-duration:10s;
-opacity:0.6;
+  bottom:30px;
+  animation-duration:10s;
+  opacity:0.6;
 }
 
 .wave:nth-child(3){
-bottom:60px;
-animation-duration:12s;
-opacity:0.4;
+  bottom:60px;
+  animation-duration:12s;
+  opacity:0.4;
 }
 
 .login-box{
-display:flex;
-flex-direction:column;
-align-items:center;
-z-index:2;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  z-index:2;
 }
 
 input{
-width:270px;
-padding:14px;
-margin:10px;
-border:none;
-border-radius:10px;
-background:#e9e9e9;
-font-size:15px;
-text-align:center;
+  width:270px;
+  padding:14px;
+  margin:10px;
+  border:none;
+  border-radius:10px;
+  background:#e9e9e9;
+  font-size:15px;
+  text-align:center;
 }
 
 button{
-margin-top:10px;
-background:#2bb673;
-border:none;
-padding:10px 28px;
-color:white;
-font-size:16px;
-border-radius:12px;
-cursor:pointer;
+  margin-top:10px;
+  background:#2bb673;
+  border:none;
+  padding:10px 28px;
+  color:white;
+  font-size:16px;
+  border-radius:12px;
+  cursor:pointer;
 }
 
 button:hover{
-background:#22a565;
+  background:#22a565;
 }
 
+/* Animations */
 @keyframes zoom{
-from{transform:scale(0.6);opacity:0;}
-to{transform:scale(1);opacity:1;}
+  from{transform:scale(0.6);opacity:0;}
+  to{transform:scale(1);opacity:1;}
 }
 
 @keyframes wave{
-0%{transform:translateX(0);}
-100%{transform:translateX(-50%);}
+  0%{transform:translateX(0);}
+  100%{transform:translateX(-50%);}
 }
-
 </style>
 </head>
 
 <body>
 
 <!-- INTRO -->
-
 <div id="intro">
-
-<img src="LOGO.jpeg" class="logo">
-
-<div class="title">RIVER FLOW INTERNATIONAL</div>
-
-<div class="line"></div>
-
-<div class="subtitle">Teacher Support Centre</div>
-
+  <img src="LOGO.jpeg" class="logo" alt="Logo">
+  <div class="title">RIVER FLOW INTERNATIONAL</div>
+  <div class="line"></div>
+  <div class="subtitle">Teacher Support Centre</div>
 </div>
 
 <!-- LOGIN -->
-
 <div id="login">
+  <div class="wave"></div>
+  <div class="wave"></div>
+  <div class="wave"></div>
 
-<div class="wave"></div>
-<div class="wave"></div>
-<div class="wave"></div>
-
-<div class="login-box">
-
-<input type="text" id="schoolName" placeholder="Name of School">
-
-<input type="text" id="schoolCode" placeholder="School Code">
-
-<button onclick="login()">Log in</button>
-
-</div>
-
+  <div class="login-box">
+    <input type="text" id="schoolName" placeholder="Name of School">
+    <input type="text" id="schoolCode" placeholder="School Code">
+    <button onclick="login()">Log in</button>
+  </div>
 </div>
 
 <script>
-
-/* intro fade */
-
+// Fade out intro after 4 seconds
 setTimeout(function(){
-document.getElementById("intro").style.opacity="0";
-document.getElementById("intro").style.visibility="hidden";
+  document.getElementById("intro").style.opacity="0";
+  document.getElementById("intro").style.visibility="hidden";
 },4000);
 
-
-/* login test */
+// Test schools data
+const schools = [
+  {name: "River Flow School", code: "1234"},
+  {name: "Test School", code: "5678"}
+];
 
 function login(){
+  let name = document.getElementById("schoolName").value.trim().toLowerCase();
+  let code = document.getElementById("schoolCode").value.trim();
 
-let name = document.getElementById("schoolName").value;
-let code = document.getElementById("schoolCode").value;
+  let valid = schools.some(s => s.name.toLowerCase() === name && s.code === code);
 
-if(name === "River Flow School" && code === "1234"){
-
-window.location.href="dashboard.html";
-
+  if(valid){
+    window.location.href = "dashboard.html"; // Redirect after successful login
+  } else {
+    alert("Incorrect School Name or Code");
+  }
 }
-else{
-
-alert("Incorrect School Name or Code");
-
-}
-
-}
-
 </script>
 
 </body>
